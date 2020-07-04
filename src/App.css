@@ -1,0 +1,296 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkids18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype');
+}
+/*******Common html elements*******/
+:root {
+  --headerColor: (68, 228, 156);
+  --backgroundColor: #DEE4F9;
+  --textColor: #175BE3;
+  --borderColor: #400CFA;
+  --butnColor: #0c0c0c;
+  --carouselColor: black;
+  --carouselBack: #e70c0c;
+  --carouselMove: #0beb0b;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+div#root {
+  background-color: var(--backgroundColor);
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.container {
+  background-color: var(--backgroundColor);
+}
+p {
+  color: var(--textColor);
+}
+.btn-black {
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+  background: transparent;
+}
+.btn-black:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainwhite) !important;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
+}
+/***************Top****************/
+.jumbotron {
+  position: relative;
+  padding: 0rem 0rem 0.5rem 0rem;
+  background-color: #dee4f970;
+  /*   #button{
+        background-color:@buttonColor;
+        //background-image: url('./constants/bzflag.png');
+        background-repeat: no-repeat;
+        background-size: 5rem 4rem;
+        background-blend-mode:soft-light; 
+        color :  var(--butnColor);
+        height: 4rem;
+        width:  5rem;      
+               
+        #closed{
+            color: @closedColor;
+        }    
+        #open{
+            color: @openColor;
+        }
+        
+    }
+ */
+}
+.jumbotron .navbar-brand {
+  margin: 0 5% 0 0;
+  font-family: 'Shrikhand', cursive;
+}
+.jumbotron .navbar-dark {
+  background-color: #1383F3;
+  padding: 0 2rem;
+  border-bottom: 0.2em ridge var(--borderColor);
+  min-width: 100%;
+  transition: top 0.1s ease;
+}
+.jumbotron .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.jumbotron .navbar-dark-hide {
+  top: -60px;
+}
+.jumbotron .headerContent {
+  padding: 0 0 0 0;
+}
+.jumbotron .media-body {
+  font-size: 0.8rem;
+  padding: 0  12%;
+}
+.jumbotron .media-body .media-heading {
+  font-family: 'Allan', 'Arial Narrow', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  text-align: left;
+  color: #14B9FF;
+  mix-blend-mode: multiply;
+}
+.jumbotron .media-body .media-heading #sanJose {
+  padding-left: 0.5rem;
+  color: orange;
+}
+.jumbotron #pill {
+  background: linear-gradient(to right, #DEE4F9, #14B9FF);
+  border-radius: 2.8rem;
+  margin: 5rem 25% 1rem 25%;
+  display: flex;
+  align-items: center;
+}
+.jumbotron .logo {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  background-size: 6rem 6rem;
+  background-blend-mode: overlay;
+}
+@media (min-width: 700px) {
+  .jumbotron .logo {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    background-size: 8rem 8rem;
+  }
+}
+/****************Body***************/
+/* .row-content {
+    border-left: 0.2em solid #400CFA;
+    border-right: 0.2em solid #400CFA;
+}
+ */
+.content {
+  min-height: 25rem;
+  max-width: 60rem;
+}
+.content #pharmacistImage {
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem 1rem;
+}
+.content .slide {
+  height: 20rem;
+  width: 75%;
+}
+.content .carousel-control-prev-icon,
+.content .carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: var(--carouselColor);
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 2px solid var(--carouselColor);
+  background-image: none;
+}
+.content .carousel-indicators .active {
+  background-color: var(--carouselBack);
+}
+.content .carousel-control-next-icon:after {
+  content: '>';
+  font-size: 55px;
+  font-weight: 500;
+  color: var(--carouselMove);
+}
+.content .carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  font-weight: 500;
+  color: var(--carouselMove);
+}
+.content .CarouselCaption {
+  color: var(--headerColor);
+}
+.content .text-blue {
+  color: #14B9FF;
+}
+.content .auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+.content .auth-inner {
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+.content .auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+.content .auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+.content .custom-control-label {
+  font-weight: 400;
+}
+.content .forgot-password,
+.content .forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+.content .forgot-password a {
+  color: #167bff;
+}
+#check {
+  padding: 0px 0px 0px 1em;
+}
+/***************Bottom****************/
+/*Using padding and margin moreso than position, relative parent to absolute child 
+displays element element within parent, use fixed to stick or sticky */
+.footer {
+  border-left: 0.2em solid var(--borderColor);
+  border-right: 0.2em solid var(--borderColor);
+  border-top: 0.2em solid var(--borderColor);
+  padding: 0.5rem 2rem 0.1rem 2rem;
+  background: var(--backgroundColor);
+  line-height: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+.footer .rsc {
+  margin: 0 0 0 0;
+  padding: 0 0 0 60%;
+}
+.address {
+  padding-left: 8%;
+}
+/************************************ Media Queries ***********************************/
+@media (min-width: 700px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+  /************ Header ********************/
+  .navbar-brand {
+    margin: 0 5% !important;
+    font-family: 'Shrikhand', cursive;
+  }
+  .navbar-collapse {
+    min-width: 75%;
+  }
+  #pill {
+    background: #FFF7F7;
+    border-radius: 2.8rem;
+    margin: 0rem 25%;
+  }
+  /************ Body **********************/
+  /************ Footer *******************/
+  .address {
+    padding: 0.2rem 0rem 0.5rem 1rem;
+    margin: 0.2rem 0rem;
+  }
+  .hours {
+    padding: 0.2rem 0rem 0.5rem 1rem;
+    margin: 0.2rem 0rem;
+  }
+}
+/*# sourceMappingURL=App.css.map */

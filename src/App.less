@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+
+/*******Common html elements*******/
+:root{
+    --headerColor: (68, 228, 156);
+    --backgroundColor:#DEE4F9;
+    --textColor: #175BE3;
+    --borderColor:#400CFA;
+    --butnColor:rgb(12, 12, 12);
+    --carouselColor: black;
+    --carouselBack: rgb(231, 12, 12);
+    --carouselMove: rgb(11, 235, 11);
+}
+
+@buttonColor: rgb(214, 221, 240);
+@headingColor:  #14B9FF;
+@clearColor: #FFF7F7;
+@subHeadingColor: orange;
+@closedColor: rgb(184, 17, 17);
+@openColor: green;
+@backgroundColor: #DEE4F9;
+@navbarColor: #1383F3;
+@headerColor: #dee4f970;
+
+html, body {
+    overflow-x: hidden;
+}
+div#root{
+    background-color: var(--backgroundColor) ;
+    //background-image: url('./constants/backdrop.jpg');
+    background-position: center;    
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; // TODO: get 1920 x 1080 image 
+}
+
+.container{
+    background-color: var(--backgroundColor);    
+}
+p{
+    color: var(--textColor) ;
+}
+
+.btn-black{
+    font-size: 0.8rem !important;
+    color: var(--mainDark);
+    border-radius: 0 !important;
+    border: 0.1rem solid var(--mainDark) !important;
+    background: transparent;
+}
+
+.btn-black:hover{
+    background: var(--mainDark) !important;
+    color:var(--mainwhite) !important;    
+}
+
+.cart-icon{
+    cursor:pointer;
+    font-size:1.2rem;
+    color: var(--mainYellow);
+}
+
+/***************Top****************/
+
+.jumbotron {
+    position: relative;
+    padding:0rem 0rem 0.5rem 0rem; 
+    background-color: @headerColor;      
+    
+
+    .navbar-brand{
+        margin: 0 5% 0 0;  
+        font-family: 'Shrikhand', cursive;
+    } 
+
+    .navbar-dark {
+        background-color:@navbarColor;
+        padding: 0 2rem;  
+        border-bottom: 0.2em ridge var(--borderColor);  
+        min-width:100%; 
+        transition: top 0.1s ease;         
+    }
+     
+    .sticky{
+        position: fixed;
+        top: 0;
+        width: 100%; 
+        z-index: 999;
+    }
+    .navbar-dark-hide{
+        top: -60px;
+    }
+    
+    .headerContent{
+        padding: 0 0 0 0;        
+    }
+
+  /*   #button{
+        background-color:@buttonColor;
+        //background-image: url('./constants/bzflag.png');
+        background-repeat: no-repeat;
+        background-size: 5rem 4rem;
+        background-blend-mode:soft-light; 
+        color :  var(--butnColor);
+        height: 4rem;
+        width:  5rem;      
+               
+        #closed{
+            color: @closedColor;
+        }    
+        #open{
+            color: @openColor;
+        }
+        
+    }
+ */
+    .media-body{
+        font-size: 0.8rem;
+        padding: 0  12%;        
+        .media-heading{
+            font-family:'Allan', 'Arial Narrow', Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.2rem;
+            text-align: left;
+            color: @headingColor;
+            mix-blend-mode: multiply;
+            #sanJose{
+                padding-left: 0.5rem;
+                color: @subHeadingColor;
+            }
+            
+        }
+    } 
+
+    #pill{
+        background: linear-gradient(to right, @backgroundColor, @headingColor);
+        border-radius: 2.8rem;
+        margin: 5rem 25% 1rem 25%; 
+        display: flex; 
+        align-items: center;      
+    }
+
+    .logo{
+        display: block;        
+        width: 6rem;
+        height: 6rem;          
+        background-size: 6rem 6rem;
+        background-blend-mode: overlay;                     
+    }   
+   
+    @media (min-width:700px) {
+        .logo{
+            display: block;
+            width: 8rem;
+            height: 8rem;
+            background-size: 8rem 8rem;  
+        }
+    }
+    
+}
+
+/****************Body***************/
+/* .row-content {
+    border-left: 0.2em solid #400CFA;
+    border-right: 0.2em solid #400CFA;
+}
+ */
+
+ .content{
+     min-height: 25rem;
+     max-width: 60rem;
+     #pharmacistImage{
+         height: 5rem;
+         width: 5rem;
+         padding: 1rem 1rem;
+     }
+     .slide{
+        height: 20rem;
+        width: 75%;
+     }
+
+     .carousel-control-prev-icon,
+     .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: var(--carouselColor);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 2px solid var(--carouselColor);
+    background-image: none;
+    }
+
+    .carousel-indicators .active{
+        background-color:var(--carouselBack);
+    }
+
+    .carousel-control-next-icon:after
+    {
+    content: '>';
+    font-size: 55px;
+    font-weight: 500;
+    color:var(--carouselMove);
+    }
+
+    .carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    font-weight: 500;
+    color:var(--carouselMove);
+    }
+
+    .CarouselCaption{
+        color: var(--headerColor);
+    }
+
+    .text-blue{
+        color: @headingColor;
+    }
+
+    .auth-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+      }
+      
+      .auth-inner {
+        width: 450px;
+        margin: auto;
+        background: #ffffff;
+        box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+        padding: 40px 55px 45px 55px;
+        border-radius: 15px;
+        transition: all .3s;
+      }
+      
+      .auth-wrapper .form-control:focus {
+        border-color: #167bff;
+        box-shadow: none;
+      }
+      
+      .auth-wrapper h3 {
+        text-align: center;
+        margin: 0;
+        line-height: 1;
+        padding-bottom: 20px;
+      }
+      
+      .custom-control-label {
+        font-weight: 400;
+      }
+      
+      .forgot-password,
+      .forgot-password a {
+        text-align: right;
+        font-size: 13px;
+        padding-top: 10px;
+        color: #7f7d7d;
+        margin: 0;
+      }
+      
+      .forgot-password a {
+        color: #167bff;
+      }      
+
+ }
+
+#check{
+    padding: 0px 0px 0px 1.0em
+}
+
+
+
+/***************Bottom****************/
+/*Using padding and margin moreso than position, relative parent to absolute child 
+displays element element within parent, use fixed to stick or sticky */
+.footer{      
+    border-left: 0.2em solid var(--borderColor);
+    border-right: 0.2em solid var(--borderColor);
+    border-top: 0.2em solid var(--borderColor);   
+    padding: 0.5rem 2rem 0.1rem 2rem;
+    background: var(--backgroundColor);
+    line-height: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+
+    .rsc{
+        margin: 0 0 0 0;
+        padding: 0 0 0 60%;
+    }
+          
+}
+.address{
+    padding-left: 8%;
+}
+
+
+/************************************ Media Queries ***********************************/
+
+@media (min-width: 700px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+    /************ Header ********************/
+    .navbar-brand{
+        margin: 0 5% !important;  
+        font-family: 'Shrikhand', cursive;
+    }
+
+    .navbar-collapse {
+        min-width: 75%;
+    } 
+
+    
+    #pill{
+        background: @clearColor;
+        border-radius: 2.8rem;
+        margin: 0rem 25%;       
+    }
+    /************ Body **********************/
+    /************ Footer *******************/
+
+   .address{
+       padding: 0.2rem 0rem 0.5rem 1.0rem;
+       margin: 0.2rem 0rem;
+   }
+   .hours{   
+        padding: 0.2rem 0rem 0.5rem 1.0rem;
+        margin: 0.2rem 0rem;    
+   }
+}
+
+
+
+
+
+
